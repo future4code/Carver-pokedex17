@@ -34,3 +34,23 @@ export const Header = styled.header`
     }
   }
 `;
+export const BackButton = styled.button`
+    background:  transparent;
+     height:  38px;
+     margin: 5px;
+     line-height:  40px;
+     border:  none
+     display:  inline-block;
+     float:  none;
+     text-align:  center;
+          width:  120px;
+     padding:  0px!important;
+     font-size:  14px;
+     color: #3A445D;
+ }
+
+:hover  {
+  background:#4D566D;
+     color:white; 
+ }
+`
