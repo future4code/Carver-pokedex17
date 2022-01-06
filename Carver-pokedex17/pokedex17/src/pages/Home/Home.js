@@ -8,8 +8,13 @@ import { useGlobalStates, useGlobalSetters } from '../../global/GlobalState'
 
 export default function Home() {
   const navigate = useNavigate();
-  const page = useGlobalStates();
-  const setPage = useGlobalSetters();
+  const { page, limit, offset } = useGlobalStates();
+  const { setPage, setLimit, setOffset } = useGlobalSetters();
+
+  const handlePageChange = (event, value) => {
+    setPage(value)
+    setOffset((value * limit) - limit)
+  }
 
   return (
     <>
@@ -17,7 +22,14 @@ export default function Home() {
         <button onClick={() => gotToPokedex(navigate)}>Pokédex</button>
         <h1>Lista dos Pokémons</h1>
       </Header>
-      <Pagination count={10} variant="outlined" shape="rounded" />
+      <Pagination 
+        sx={{ margin: '20px' }} 
+        count={45} 
+        variant="outlined" 
+        shape="rounded" 
+        page={page.page} 
+        onChange={handlePageChange} 
+      />
       <Main>
         <PokemonList />
       </Main>

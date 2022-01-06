@@ -5,4 +5,6 @@ export const Header = styled(Header1Button)`
 
 `;
 
-export const Main = styled(MainGrid)``;
+export const Main = styled(MainGrid)`
+
+`;

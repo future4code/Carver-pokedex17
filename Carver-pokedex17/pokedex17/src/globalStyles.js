@@ -92,6 +92,13 @@ export const Header1Button = styled.header`
   }
 `;
 
+export const PaginationContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 export const MainGrid = styled.main`
   font-size: 1rem;
   display: grid;

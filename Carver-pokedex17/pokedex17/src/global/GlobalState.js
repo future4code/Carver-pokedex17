@@ -6,9 +6,10 @@ export const GlobalState = (props) => {
   const [ pokedex, setPokedex ] = useState([]);
   const [ page, setPage ] = useState(1)
   const [ limit, setLimit ] = useState(20)
+  const [ offset, setOffset ] = useState(0)
   const {
     pokemonList, loading, error, pokemonErrors
-  } = useGetPokemonList(20, 10); //pagination
+  } = useGetPokemonList(20, offset); //pagination
 
   const states = {
     pokemonList,
@@ -17,10 +18,11 @@ export const GlobalState = (props) => {
     pokemonErrors,
     pokedex,
     page,
-    limit
+    limit,
+    offset
   };
 
-  const setters = { setPokedex, setPage, setLimit };
+  const setters = { setPokedex, setPage, setLimit, setOffset };
 
   return (
     <GlobalStateContext.Provider
