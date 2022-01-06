@@ -13,7 +13,7 @@ export default function Pokedex() {
     <>
       <Header>
         <button onClick={() => goToHome(navigate)}>Pokémons</button>
-        <h1>Pokedex</h1>
+        <h1>Pokédex</h1>
       </Header>
       <Main>
         {pokedex

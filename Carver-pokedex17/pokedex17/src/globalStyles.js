@@ -9,31 +9,31 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    background: red;
+    background: whitesmoke;
     font-family: Open-Sans, Helvetica, Sans-Serif;
     
     button {
       font-family: 'VT323',sans-serif;
       font-size: 1em;
-      background-color: #00BFFF;
+      background-color: #3A445D;
       color: white;
       width: fit-content;
       height: 2em;
-      transition: background-color 200ms;
+      transition: background-color 200ms, box-shadow 200ms;
       border: 0;
       border-radius: 0.2em;
-      box-shadow: 0 0 1em 0.1em black;
 
       &:hover{
-        background-color: #87CEFA;
+        background-color: #D74E09;
         cursor: pointer;
+        box-shadow: 3px 3px 5px grey;
       }
     }
   }
 
   header {
     font-size: 1rem;
-    background-color: red;
+    background-color: #91A8A4;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,7 +50,7 @@ const GlobalStyle = createGlobalStyle`
       content: "";
       width: 100vw;
       height: 6em;
-      background-color: red;
+      background-color: #91A8A4;
       position: fixed;
       top: 0;
       left: 0;
@@ -58,12 +58,11 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h1 {
-      color :white;
-      text-shadow: black 0.1em 0.1em 0.2em,
-      -0.1em 0.1em 0.1em #00BFFF;
+      color: white;
+      text-shadow: 3px 3px 3px #3A445D;
       font-family: 'Oswald', sans-serif;
       font-size: 2em;
-      letter-spacing: 5px;
+      letter-spacing: 2px;
       margin: 0;
     }
 
