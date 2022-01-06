@@ -6,6 +6,6 @@ export function getPokemon(pokemonID) {
   return axios.get(`${URL}/pokemon/${pokemonID}`);
 }
 
-export function getPokemonList() {
-  return axios.get(`${URL}/pokemon?limit=20`);
+export function getPokemonList(limit, offset) {
+  return axios.get(`${URL}/pokemon?limit=${limit}&offset=${offset}`);
 }

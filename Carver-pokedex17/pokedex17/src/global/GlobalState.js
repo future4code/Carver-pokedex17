@@ -4,19 +4,23 @@ import useGetPokemonList from "../hooks/useGetPokemonList";
 
 export const GlobalState = (props) => {
   const [ pokedex, setPokedex ] = useState([]);
+  const [ page, setPage ] = useState(1)
+  const [ limit, setLimit ] = useState(20)
   const {
     pokemonList, loading, error, pokemonErrors
-  } = useGetPokemonList();
+  } = useGetPokemonList(20, 10); //pagination
 
   const states = {
     pokemonList,
     loading,
     error,
     pokemonErrors,
-    pokedex
+    pokedex,
+    page,
+    limit
   };
 
-  const setters = { setPokedex };
+  const setters = { setPokedex, setPage, setLimit };
 
   return (
     <GlobalStateContext.Provider

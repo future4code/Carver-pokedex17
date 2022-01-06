@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getPokemon, getPokemonList } from "../api";
 
-export default function useGetPokemonList() {
+export default function useGetPokemonList(limit, offset) {
   const [ pokemonList, setPokemonList ] = useState([]);
   const [ loading, setLoading ] = useState(true);
   const [ error, setError ] = useState("");
@@ -11,7 +11,7 @@ export default function useGetPokemonList() {
     try {
       setLoading(true);
 
-      const pokemonNames = (await getPokemonList()).data.results;
+      const pokemonNames = (await getPokemonList(limit, offset)).data.results;
 
       const pokemons = (await Promise.all(pokemonNames.map(async (pokemon) => {
         try {
