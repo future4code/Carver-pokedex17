@@ -30,7 +30,11 @@ export default function useGetPokemonList(limit, offset) {
     }
   }
 
-  useEffect(() => getPokemonListFromApi(), []);
+  useEffect(() => getPokemonListFromApi(), [])
+  useEffect(() => console.log('rodado ao iniciar'), [])
+  useEffect(() => getPokemonListFromApi(), [limit, offset])
+  useEffect(() => console.log('rodado ao atualizar limit ou offset'), [limit, offset])
+  
 
   return {
     pokemonList,
