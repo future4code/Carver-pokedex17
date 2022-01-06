@@ -9,5 +9,8 @@ export function gotToPokedex(navigate) {
 export function goToDetails(navigate, id) {
   navigate(`/details/${id}`);
 }
+export function goBack (navigate) {
+  navigate(-1);
+}
 
 

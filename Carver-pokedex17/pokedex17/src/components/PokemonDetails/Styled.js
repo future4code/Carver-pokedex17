@@ -22,7 +22,7 @@ export const Images = styled.section`
 `;
 
 export const SectionText = styled.section`
-  background-color: #00BFFF	;
+  background-color: #829793	;
   color: white;
   padding: 1em;
   height: fit-content;
