@@ -22,20 +22,20 @@ export default function PokemonDetails(props) {
       </Images> 
 
       <SectionStats>
-        <h2>Estatísticas</h2>
+        <h1>Estatísticas</h1>
         {stats.map((stat) => (
           <article key={stat.stat.name}>
-            <h3>{stat.stat.name}</h3>
+            <h4>{stat.stat.name.toUpperCase()}</h4>
             <p>{stat.base_stat}</p>
           </article>
         ))}
       </SectionStats>
       <SectionInfo>
-        <h2>Tipos</h2>
+        <h1>Tipos</h1>
         <ArticleTypes>
           {types.map((type) => <p key={type.slot}>{type.type.name}</p>)}
         </ArticleTypes>
-        <h2>Movimentos</h2>
+        <h1>Movimentos</h1>
         <ArticleMoves>
           {moves.map(({ move }) => <p key={move.url}>{move.name}</p>)}
         </ArticleMoves>
