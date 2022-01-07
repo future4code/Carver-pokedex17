@@ -19,6 +19,7 @@ export default function NotFound() {
             <MainError>
         
         <br/>
+               
         <img
           src="https://media0.giphy.com/media/SHyuhBtRr8Zeo/giphy.gif?cid=ecf05e471t8fl3wttm2qjgim3pu9epgvkiyfruo902liaesn&rid=giphy.gif&ct=g"
           alt="Erro"
