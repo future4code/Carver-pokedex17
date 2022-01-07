@@ -4,11 +4,11 @@ export const Images = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white	;
+  background-color: whitesmoke;
   height: fit-content;
   border-radius: 20px;
-  border: 2px solid black;
-  box-shadow: 0 0 10px 5px white;
+  border: 2px solid #3A445D;
+  box-shadow: 3px 3px 5px #91A8A4;
 
   img {
     width: clamp(96px, calc(61.34px + 11.55vw), 200px);
@@ -22,12 +22,13 @@ export const Images = styled.section`
 `;
 
 export const SectionText = styled.section`
-  background-color: #829793	;
-  color: white;
+  background-color: whitesmoke;
+  color: #3A445D;
   padding: 1em;
   height: fit-content;
-  border-radius: 10px;
-  border: 2px solid black;
+  border-radius: 20px;
+  border: 2px solid #3A445D;
+  box-shadow: 3px 3px 5px #91A8A4;
   text-align: center;
 `;
 
@@ -67,7 +68,7 @@ export const ArticleTypes = styled.article`
   }
 `;
 
-export const ArticleMovs = styled.article`
+export const ArticleMoves = styled.article`
   display: grid;
   grid-template-columns: repeat(auto-fill, 13ch);
   justify-items: center;
@@ -77,3 +78,4 @@ export const ArticleMovs = styled.article`
     width: fit-content;
   }
 `;
+
